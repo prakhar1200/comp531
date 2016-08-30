@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Autor" content="Prakhar Doshi">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Successful Registration</title>
+</head>
+
+<body>
+    <h3>Query String Parameters</h3>
+    <table id='queryTable'>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+
+    </table>
+
+</body>
+
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    var queryString = decodeURIComponent(window.location.search.substring(1));
+    var queryParameters = queryString.split('&');
+    var queryLength = queryParameters.length;
+    var row;
+    var cell1;
+    var cell2;
+    
+    for (var i = 0; i < queryParameters.length - 1; i++) {
+         row = document.getElementById('queryTable').insertRow(i+1);
+         cell1 = row.insertCell(0);
+         cell2 = row.insertCell(1);
+        cell1.id='key';
+        cell1.innerHTML =  queryParameters[i].split('=')[0];
+        cell2.innerHTML =  queryParameters[i].split('=')[1]; 
+      }
+      row = document.getElementById('queryTable').insertRow(queryParameters.length);
+       cell1 = row.insertCell(0);
+       cell2 = row.insertCell(1);
+        cell1.id = 'key';
+        cell1.innerHTML =  queryParameters[i].split('=')[0];
+        cell2.innerHTML =  new Date(Number(queryParameters[i].split('=')[1]));  
+
+    /*var tablerow = '';
+    for (var i = 0; i < queryLength - 1; i++) {
+        tablerow = '<tr> <td id="key">' + queryParameters[i].split('=')[0] + '</td><td>' + queryParameters[i].split('=')[1] + '</td></tr>';
+        document.getElementById('queryTable').innerHTML += tablerow;
+    }
+    tablerow = '<tr> <td id="key">' + queryParameters[queryLength - 1].split('=')[0] + '</td><td>' + new Date(Number(queryParameters[queryLength - 1].split('=')[1])) + '</td></tr>';
+    document.getElementById('queryTable').innerHTML += tablerow;*/
+ });
+</script>
+
+</html>

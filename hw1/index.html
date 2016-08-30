@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Autor" content="Prakhar Doshi">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <form id="register" method="GET" action="formprocessor.html" onsubmit="return validateRegistration()">
+        <label> Account Name </label>
+        <input type="text" name="AccountName" pattern="[a-zA-Z][a-zA-Z0-9]*$" required oninvalid='this.setCustomValidity("Do not Start With a Number and Use Leter and Numbers");' onchange='this.setCustomValidity("");'>
+        <label> Display Name </label>
+        <input type="text" name="DisplayName" id="displayName" pattern="[a-zA-Z0-9 ]*$">
+        <label>Email ID</label>
+        <input type="email" name="EmailID" id="registrationemail" placeholder="ab@c.com" required/>
+        <label> Phone Number: </label>
+        <input type="text" name="PhoneNumber" id="phone" placeholder="123-234-3456" pattern="\d\d\d-\d\d\d-\d\d\d\d" required>
+        <label> Date Of Birth </label>
+        <input type="date" name="Date_Of_Birth" id="birth" required max='' oninvalid='this.setCustomValidity("User must be older than 18");' onchange='this.setCustomValidity("");'>
+        <label>Zip Code</label>
+        <input type="text" name="ZipCode" id="zip" pattern="[0-9]{5}" oninvalid='this.setCustomValidity("Zip Code Should be 5 digits");' onchange='this.setCustomValidity("");'  required>
+        <label>Password</label>
+        <input type="password" id="password" required/>
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" required/>
+        <input type="hidden" name="Registration_Time" id="timeStamp" value="">
+        <br>
+        <br>
+        <input type="Submit" value="Register">
+        <input type="Reset" name="Reset" value="Clear">
+    </form>
+</body>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var registrationTime = document.getElementById("timeStamp");
+        registrationTime.value = (new Date).getTime();
+        var today = new Date();
+        var month = (today.getMonth() + 1).toString();
+        var day = today.getDate().toString();
+
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+        var maxDate = [today.getFullYear() - 18, month, day].join('-');
+        var dob = document.getElementById('birth');
+        document.getElementById('birth').setAttribute('max', maxDate);
+        /* /*console.log(document.getElementById('birth').max);
+         document.getElementById('birth').addEventListener('invalid',function(){
+             
+             this.setCustomValidity("User has to be older than 18");
+         });
+         document.getElementById('birth').addEventListener('change',function(){
+             
+             this.setCustomValidity("");
+         });
+         */
+
+
+
+    });
+
+    function validateRegistration() {
+        console.log(document.getElementById('password'));
+        if (document.getElementById('password').value === document.getElementById('confirmPassword').value) {
+            return true;
+        } else {
+            
+            return false;
+        }
+
+
+        /* var birthDate = new Date(document.getElementById("birth"));
+         
+         console.log(birthDate);
+         var tempDate = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
+         console.log(tempDate);
+         if(tempDate <= (new Date).getTime()){
+             window.alert("Underage");
+             return false;
+         }
+         else {
+             return true;
+         }*/
+    }
+</script>
+
+</html>
