@@ -46,6 +46,7 @@
     <br>
     <button id="pause" onclick="pauseInterval()">Pause</button>
     <button id="resume" onclick="resumeInterval()">Resume</button>
+    </body>
     <script>
         var timeLeft = 14;
         var intervalID;
@@ -53,8 +54,6 @@
         document.addEventListener("DOMContentLoaded", function() {
             intervalID = setInterval(countdown, 1000);
             setTimeout(alertUser, 5000);
-
-
         });
 
         function clearMessage() {
@@ -82,3 +81,4 @@
             intervalID = setInterval(countdown, 1000);
         }
     </script>
+    </html>
