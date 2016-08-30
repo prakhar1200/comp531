@@ -24,7 +24,7 @@
         <label>Zip Code</label>
         <input type="text" name="ZipCode" id="zip" pattern="[0-9]{5}" oninvalid='this.setCustomValidity("Zip Code Should be 5 digits");' onchange='this.setCustomValidity("");' required>
         <label>Password</label>
-        <input type="password" id="password" required/>
+        <input type="password" name="password" id="password" required/>
         <label>Confirm Password</label>
         <input type="password" id="confirmPassword" required/>
         <input type="hidden" name="Registration_Time" id="timeStamp" value="">
@@ -52,6 +52,7 @@
         if (document.getElementById('password').value === document.getElementById('confirmPassword').value) {
             return true;
         } else {
+            window.alert("Passwords Do Not Match");
             return false;
         }
     }
