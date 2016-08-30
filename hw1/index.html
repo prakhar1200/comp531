@@ -48,19 +48,6 @@
         var maxDate = [today.getFullYear() - 18, month, day].join('-');
         var dob = document.getElementById('birth');
         document.getElementById('birth').setAttribute('max', maxDate);
-        /* /*console.log(document.getElementById('birth').max);
-         document.getElementById('birth').addEventListener('invalid',function(){
-             
-             this.setCustomValidity("User has to be older than 18");
-         });
-         document.getElementById('birth').addEventListener('change',function(){
-             
-             this.setCustomValidity("");
-         });
-         */
-
-
-
     });
 
     function validateRegistration() {
@@ -72,19 +59,6 @@
             return false;
         }
 
-
-        /* var birthDate = new Date(document.getElementById("birth"));
-         
-         console.log(birthDate);
-         var tempDate = new Date(birthDate.getFullYear() + 18, birthDate.getMonth(), birthDate.getDate());
-         console.log(tempDate);
-         if(tempDate <= (new Date).getTime()){
-             window.alert("Underage");
-             return false;
-         }
-         else {
-             return true;
-         }*/
     }
 </script>
 
