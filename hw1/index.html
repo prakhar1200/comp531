@@ -22,7 +22,7 @@
         <label> Date Of Birth </label>
         <input type="date" name="Date_Of_Birth" id="birth" required max='' oninvalid='this.setCustomValidity("User must be older than 18");' onchange='this.setCustomValidity("");'>
         <label>Zip Code</label>
-        <input type="text" name="ZipCode" id="zip" pattern="[0-9]{5}" oninvalid='this.setCustomValidity("Zip Code Should be 5 digits");' onchange='this.setCustomValidity("");'  required>
+        <input type="text" name="ZipCode" id="zip" pattern="[0-9]{5}" oninvalid='this.setCustomValidity("Zip Code Should be 5 digits");' onchange='this.setCustomValidity("");' required>
         <label>Password</label>
         <input type="password" id="password" required/>
         <label>Confirm Password</label>
@@ -68,7 +68,7 @@
         if (document.getElementById('password').value === document.getElementById('confirmPassword').value) {
             return true;
         } else {
-            
+
             return false;
         }
 
