@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Hello HTML!</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td>Athenian</td>
+            <td>Owl</td>
+        </tr>
+        <tr>
+            <td colspan="2"><img src="http://explore.rice.edu/uploadedImages/Explore/Welcome_to_Rice/riceacademicseal1.jpg">
+            </td>
+        </tr>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <ul>
+        <li><a href="http://www.rice.edu">Rice</a>
+        </li>
+        <li><a href="http://www.chron.com">Houston Chronicle</a>
+        </li>
+        <li><a href="http://www.twitter.com">Twitter</a>
+        </li>
+        <li><a href="http://www.twosigma.com">TwoSigma</a>
+        </li>
+    </ul>
+
+    <textarea id="userMessage" placeholder="--- Enter your message here --- " rows="10" cols="50">
+    </textarea>
+    <button onclick="clearMessage()">Clear</button>
+    <br>
+    <p><b>COUNTDOWN TIMER</b>
+    </p>
+    <br>
+    <span id="indicator"><b>15</b></span>
+    <br>
+    <br>
+    <button id="pause" onclick="pauseInterval()">Pause</button>
+    <button id="resume" onclick="resumeInterval()">Resume</button>
+    </body>
+    <script>
+        var timeLeft = 14;
+        var intervalID;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            intervalID = setInterval(countdown, 1000);
+            setTimeout(alertUser, 5000);
+        });
+
+        function clearMessage() {
+            document.getElementById("userMessage").value = "";
+        }
+
+        function countdown() {
+            document.getElementById("indicator").innerHTML = "<b>" + timeLeft + "</b>";
+            timeLeft--;
+            if (timeLeft < 0) {
+                clearInterval(intervalID);
+                window.location.assign("https://www.clear.rice.edu/comp431/sample/hello.html");
+            }
+        }
+
+        function alertUser() {
+            window.alert("The Page will redirect when the counter reaches zero");
+        }
+
+        function pauseInterval() {
+            clearInterval(intervalID);
+        }
+
+        function resumeInterval() {
+            intervalID = setInterval(countdown, 1000);
+        }
+    </script>
+    </html>
