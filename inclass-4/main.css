@@ -1,0 +1,36 @@
+body {
+    width: 80%;
+    margin: auto;
+    background-color: #b2cecf;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+#header {
+    text-align: center;
+    color: #d02552;
+}
+.posts {
+    margin: 1% 0% 2% 0%;
+    border: 2px solid #d02552;
+}
+.posts:hover {
+    border: 2px solid black;
+}
+input[type=text] {
+    width: 20%;
+    height: 20px;
+    border: 2px solid #d02552;
+    margin: 15px 7px 7px 0px;
+}
+#sharedMessage {
+    width: 60%;
+}
+input[type=button] {
+    background-color: #50d07d;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
