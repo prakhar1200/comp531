@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var elem = document.getElementById('bounce');
-    var width;
-    var height;
+    var width,height;
     elem.addEventListener('mousemove', function() {
 
         if (!window.event.shiftKey & elem.firstElementChild.innerHTML === "Click Me!") {
@@ -9,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             height = Math.random() * window.innerHeight;
             elem.style.top = height + 'px';
             elem.style.left = width + 'px';
-        } else {}
-
+        } 
     });
     elem.addEventListener('click', function() {
         if (elem.firstElementChild.innerHTML === "Click Me!") {
