@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.addEventListener('mousemove', function() {
 
         if (!window.event.shiftKey & elem.firstElementChild.innerHTML === "Click Me!") {
-            width = Math.random() * Number(window.innerWidth);
-            height = Math.random() * Number(window.innerHeight);
+            width = Math.random() * window.innerWidth;
+            height = Math.random() * window.innerHeight;
             elem.style.top = height + 'px';
             elem.style.left = width + 'px';
         } else {}
