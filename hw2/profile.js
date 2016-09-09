@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (elem.value !== "") {
 
                 if (elem.validity.valid) {
-                    updateMessage += elem.previousElementSibling.innerHTML + ":" + elem.value;
+                    updateMessage += elem.previousElementSibling.innerHTML + ":" + elem.nextElementSibling.innerHTML+ "-->" + elem.value;
                 } else {
                     isValid = false;
                     errorMessage(elem.id);
