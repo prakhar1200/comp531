@@ -1,0 +1,98 @@
+body {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    width:60%;
+    margin: 0 auto;
+    background-color:#e9ebee;
+   
+}
+table {
+    border-collapse:separate;
+    border-spacing:0 5px; 
+}
+.cards {
+    text-align:center;
+     
+}
+.cards td {
+    border:1px #D3D3D3 solid;
+    position: relative;
+    vertical-align: top;
+    
+}
+.cards td img {
+    width:100%;
+}
+
+table {
+    margin-top:40px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+button {
+    background-color: #50d07d;
+    border: none;
+    color: white;
+    padding: 6px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    position:absolute;
+    top: 10px;
+    left: 10px;
+}
+
+nav {
+width : 100%;
+
+text-align:right;
+position:fixed;
+top:0;
+left:0;
+
+z-index:1;
+
+background-color:#0067b6;
+}
+
+
+a {
+    display:inline-block;
+    padding:10px;
+    margin-right: 20%;
+    font-size:20px;
+    font-family:"Montserrat";
+    text-decoration: none;
+    color:white;
+    font-variant: small-caps;
+    background-color:#50d07d;
+    
+}
+a:hover {
+    background-color:#df6c00;
+    
+}
+.edit {
+    text-align:left;
+    margin-top:20px;
+}
+.topdiv {
+    margin-top:50px ;
+}
+
+.edit label{
+    font-family: "Times New Roman", Times, serif;
+    font-weight:600;
+    font-size:20px;
+
+}
+
+#update {
+    position:relative;
+}
+
+#errorMessage p {
+    font-size:15px;
+    color:red;
+}

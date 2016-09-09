@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Autor" content="Prakhar Doshi">
+    <script type="text/javascript" src="profile.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <nav id="profilenav">
+        <a href="main.html">Home</a>
+    </nav>
+    
+    <div class="edit topdiv">
+
+        <label> Display Name </label>
+        <input type="text" id="displayName" pattern="[a-zA-Z0-9 ]*$" />
+        <label id="displayNameVal">Prakhar Doshi</label>
+    </div>
+    <div class="edit">
+        <label>Email ID</label>
+        <input type="email" id="emailID" placeholder="ab@c.com" />
+        <label id="emailIDVal">webd@gmail.com</label>
+    </div>
+    <div class="edit">
+        <label> Phone Number: </label>
+        <input type="text" id="phoneNumber" placeholder="123-234-3456" pattern="\d\d\d-\d\d\d-\d\d\d\d" />
+        <label id="phoneNumberVal">123-234-3456</label>
+    </div>
+    <div class="edit">
+        <label> Date Of Birth </label>
+        <input type="date" id="birth" max="">
+        <label id="birthVal">10/01/1993</label>
+    </div>
+    <div class="edit">
+        <label>Zip Code</label>
+        <input type="text" id="zip" pattern="[0-9]{5}">
+        <label id="zipVal">77054</label>
+    </div>
+    <div class="edit">
+        <label>Password</label>
+        <input type="password" id="password" required/>
+        <label id="passwordVal">hello@123</label>
+    </div>
+    <div class="edit">
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" required/>
+        <label id="confirmPasswordVal">hello@123</label>
+    </div>
+    <div class="edit">
+        <button id="update">Update</button>
+    </div>
+    <div id="errorMessage">
+
+    </div>
+
+</body>
+
+</html>
