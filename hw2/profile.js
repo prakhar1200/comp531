@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     updateMessage += elem.previousElementSibling.innerHTML + ":" + elem.value;
                 } else {
                     isValid = false;
-                    console.log(elem.id);
                     errorMessage(elem.id);
                 }
             }
@@ -67,11 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'birth':
                 document.getElementById('errorMessage').innerHTML += "<p>Date Of Birth :Must Be Over 18</p>";
                 break;
-
-
         }
     }
-
-
-
 });
