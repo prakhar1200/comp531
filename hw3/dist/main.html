@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Prakhar Doshi">
+
+
+  <title>Home</title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/4ccb4129ab.js"></script>
+
+  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body class="container-fluid">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a id="nav_name" class="navbar-brand" href="#">Prakhar Doshi</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="button" class="btn btn-default" aria-label="Search">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li class=""><a href="profile.html">Profile</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="row">
+
+    <div class="col-md-3">
+      <h4><i class="fa fa-user" aria-hidden="true"></i> Followers</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="thumbnail flw_display">
+            <img src="Joey-Tribbiani-Friends.png">
+            <div class="caption">
+              <p class="flw_name"><strong>Joey</strong></p>
+              <em>Joey doesn't share food!!</em>
+              
+              
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-primary col-md-offset-1 col-md-10 " aria-label="edit">
+              Unfollow</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail flw_display">
+            <img src="trump.jpg">
+            <div class="caption">
+               <p class="flw_name"><strong>Donald Trump</strong></p>
+              <em>Those are real hair </em>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-primary col-md-offset-1 col-md-10 " aria-label="edit">
+               Unfollow</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+          <div class="thumbnail flw_display">
+            <img src="kim.jpg">
+            <div class="caption">
+
+               <p class="flw_name"><strong>Kim</strong></p>
+              <em>Holidays are the best</em>
+
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-primary col-md-offset-1 col-md-10 " aria-label="edit">
+              Unfollow</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="thumbnail flw_display">
+            <img src="modi.jpg">
+            <div class="caption">
+                <p class="flw_name"><strong>Narendra Modi</strong></p>
+                <em>Innovation is the Key </em>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-primary col-md-offset-1 col-md-10 " aria-label="edit">
+              Unfollow</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-12">
+          <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+              <button type="button" class="btn btn-primary" aria-label="Add User">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="col-md-8">
+      <div class="jumbotron">
+        <div class="container-fluid text-center">
+          <img src="dp1.jpg" id="profile_img" class="img-circle img-thumbnail">
+          <h2><span id="statusText">“Yay I'm Learning JS !!”</span> <span id="editStatusButton" class="glyphicon glyphicon-edit"></span></h2>
+          <div id = "editStatus" class="input-group hide">
+            <input id= "statusBox" type="text" class="form-control">
+            <span  id ="changeStatus" class="input-group-addon btn btn-primary glyphicon glyphicon-ok "></span>
+            <span  id ="cancelStatus" class="input-group-addon btn btn-primary glyphicon glyphicon-remove "></span>
+          </div>
+        </div>
+      </div>
+      <div id="newPosts" class="row">
+        <div class="input-group col-md-6">
+          <span class="input-group-addon btn"> <label for="uploadFile">
+         <i class="fa fa-camera fa-2x" aria-hidden="true"></i>
+         </label>
+           <input class="hide" type="file" id='uploadFile'></<input></span>
+           <textarea id="postText"class="form-control custom-control" rows="2" style="resize:none"></textarea>     
+           <span class="input-group-addon btn  glyphicon glyphicon-share"></span>
+           <span id="clearPost" class="input-group-addon btn  glyphicon glyphicon-remove"></span>
+          
+        </div>
+      </div>
+
+    
+      <div class="row">
+          <div class="cards col-md-6">
+            <img src="https://unsplash.it/300/200?image=108">
+            <div>
+              <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+              <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              </button>
+
+            </div>
+        
+            <div class="input-group hide commentBox ">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary commentSubmit" aria-label="Comment">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+
+
+
+          <div class="cards col-md-6">
+            <img src="https://unsplash.it/300/200?image=109">
+            <div>
+              <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="edit">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </button>
+
+            </div>
+
+            
+            <div class="input-group hide">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                 <button type="button" class="btn btn-primary commentSubmit" aria-label="Comment">
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                  </button>
+              </span>
+            </div>
+          </div>
+      </div>
+      
+      <div class="row">
+          <div class="cards innerpost  col-md-6">
+              <p class="text-center">Lorem ipsum dolor sit amet, fermentum mauris eu. Vestibulum donec amet ut, orci in ipsum nunc elit, vitae ac integer cum accusamus, sapien suspendisse, magna proin eget curabitur nec. Ut vestibulum fermentum vel orci fames, duis diam ipsum
+              sed arcu ante. Arcu condimentum proin eros risus tempor sed, adipiscing phasellus felis et. Libero nascetur adipiscing, arcu mollis egestas suspendisse dolor adipiscing libero, erat volutpat lacus, neque ipsum dictum non pharetra. Eget non
+              est euismod, sapien non fringilla, imperdiet wisi.</p>
+              
+            <div>
+              <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+              <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <div class="input-group hide commentBox">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                 <button type="button" class="btn btn-primary" aria-label="Comment">
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                 </button>
+              </span>
+            </div>
+          </div>
+
+          <div class="cards col-md-6">
+            <img src="https://unsplash.it/300/200?gravity=west">Lorem ipsum dolor sit amet, fermentum mauris eu. Vestibulum donec amet ut, orci in ipsum nunc elit, vitae ac integer cum accusamus, sapien suspendisse, magna proin eget curabitur nec. Ut
+            vestibulum fermentum vel orci fames, duis diam ipsum sed arcu ante. Arcu condimentum proin eros risus tempor sed, adipiscing phasellus felis et. Libero nascetur adipiscing, arcu mollis egestas suspendisse dolor adipiscing libero, erat volutpat
+            lacus, neque ipsum dictum non pharetra. Eget non est euismod, sapien non fringilla, imperdiet wisi.
+
+            <div>
+              <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+              <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+               <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              </button>
+            </div>
+            
+            <div class="input-group hide commentBox ">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary commentSubmit" aria-label="Comment">
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                </button>
+              </span>
+            </div>
+           
+          </div>
+      </div>
+          <div class="row">
+            <div class="cards innerpost col-md-6">
+              <img src="https://unsplash.it/300/200?image=60">
+              <div>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="input-group hide commentBox ">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-primary commentSubmit" aria-label="Comment">
+                     <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+           </div>
+            <div class="cards innerpost col-md-6">
+              <img src="https://unsplash.it/300/200?image=50">
+              <div>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="input-group hide commentBox ">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-primary commentSubmit" aria-label="Comment">
+                     <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+           </div>           
+          </div>
+          <div class="row">
+            <div class="cards innerpost col-md-6">
+              <img src="https://unsplash.it/300/200?image=40">
+              <div>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="input-group hide commentBox ">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-primary commentSubmit" aria-label="Comment">
+                     <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+           </div>
+            <div class="cards innerpost col-md-6">
+              <img src="https://unsplash.it/300/200?image=80">
+              <div>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-primary col-md-2 buttonc" aria-label="Comment">
+                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="input-group hide commentBox ">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-primary commentSubmit" aria-label="Comment">
+                     <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+           </div>           
+          </div>          
+  
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+
+
+  <footer>
+    <p>&copy;FolkZone, Inc.</p>
+  </footer>
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+
+</html>
