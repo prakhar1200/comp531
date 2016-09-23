@@ -48,12 +48,14 @@ class ToDos extends React.Component {
     }
  
     addTodo(inputText) {
+        if(inputText) {
         var text = inputText;   
         this.setState({ todoItems: [
                 ...this.state.todoItems, 
                 {id:this.nextId++, text, isComplete : false}
             ]
-        })       
+        })
+        }
     }
 
     removeTodo(removeId) {
