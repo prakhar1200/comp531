@@ -77,14 +77,14 @@ class ToDos extends React.Component {
 				<a href ="https://webdev-rice.herokuapp.com" target="_blank">Submit your Exercise </a>
 			</span>
 			<ul className= "todo">
-			{this.state.todoItems.map(function(item) {
+			{this.state.todoItems.map((item) => {
 				var remove = this.removeTodo.bind(this, item.id);
                 var complete = this.taksComplete.bind(this, item.id);
 
 				return (
 				<ToDoItem  remove={remove} task={item.text} isComplete = {item.isComplete} complete = {complete}/>
 				)
-			},this)}			
+			})}			
 			</ul>
 		</div>
     )}
