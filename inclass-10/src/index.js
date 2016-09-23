@@ -78,11 +78,11 @@ class ToDos extends React.Component {
 			</span>
 			<ul className= "todo">
 			{this.state.todoItems.map(function(item) {
-				var boundClick = this.removeTodo.bind(this, item.id);
-                var checkTask = this.taksComplete.bind(this, item.id);
+				var remove = this.removeTodo.bind(this, item.id);
+                var complete = this.taksComplete.bind(this, item.id);
 
 				return (
-				<ToDoItem  remove={boundClick} task={item.text} isComplete = {item.isComplete} complete = {checkTask}/>
+				<ToDoItem  remove={remove} task={item.text} isComplete = {item.isComplete} complete = {complete}/>
 				)
 			},this)}			
 			</ul>
