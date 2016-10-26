@@ -25,11 +25,8 @@ describe('Validate Profile Actions', () => {
   			}
 		})
 
-
-
 	it('should Fetch All Profile Info (Zipcode and Email)',(done) =>{
-				
-
+		
 		mock(`${url}/zipcode`, { 
 			method: 'GET',
 			headers: {'Content-Type': 'application/json'},
@@ -55,7 +52,6 @@ describe('Validate Profile Actions', () => {
 				
 				expect(action).to.eql({ type: 'CHANGE_ZIPCODE',
   							payload: '77054' })
-
 	    		break
 
 				case 'CHANGE_EMAIL':
@@ -64,18 +60,11 @@ describe('Validate Profile Actions', () => {
   							payload: 'random@email.com' })
 				done()
 			
-					
 				default :break
 	
 				}
-		
-		
-
 		})
-	
-		
 })
-
 })
 
 

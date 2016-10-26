@@ -2,7 +2,8 @@ import resource from '../../actions'
 import { connect } from 'react-redux'
 
 export const reduceFollower = (headlines, avatars) => {
-   return headlines.map((headline) => ({username : headline.username, headline : headline.headline, avatar : avatars.find((user) => (user.username === headline.username)).avatar}) )
+   return headlines.map((headline) => ({username : headline.username, headline : headline.headline,
+                                        avatar : avatars.find((user) => (user.username === headline.username)).avatar}) )
 
 }
 

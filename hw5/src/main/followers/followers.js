@@ -1,11 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-
-
 const Followers = ({followerInfo}) => (
-
-
 
      <div className="col-md-3">
         <h4><i className="fa fa-user" aria-hidden="true"></i> Followers</h4>

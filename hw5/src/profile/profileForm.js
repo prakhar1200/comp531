@@ -2,12 +2,8 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-
 const ProfileForm = ({zipcode, emailID}) => {
-
-
 return (
-
  <div className="col-md-5 col-md-offset-1">
              <div className="panel panel-default">
                     <div className="panel-heading"><h2 className="panel-title">User Info</h2></div>
@@ -32,29 +28,16 @@ return (
                                          </button>
                                  </div>         
                             </div>
-                            
                     </div>
-
-
              </div>
          </div> 
-
-
-
 )
-
-
-
 }
-
-
 export default connect(
 (state) => ( {
 		  			
 		      zipcode : state.ProfileReducer.zipcode,
 		      emailID : state.ProfileReducer.email		
-			
-
 }
 )
 )(ProfileForm)

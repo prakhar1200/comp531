@@ -3,8 +3,6 @@ import resource from '../actions'
 const initialState = {
 		zipcode : "",
 		email : ""
-	
-	 
 }
 
 const ProfileReducer = (state = initialState , action) => {

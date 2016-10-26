@@ -4,10 +4,7 @@ import changeHeadline from  './headlinesActions'
 import resource from '../../actions'
 
 const Headline = ({userHeadline,statusEditBoxVisible, showEditBox, hideEditBox, changeHeadline}) => {
-
-
-       let newStatus;
-
+    let newStatus;
 	const _changeHeadline = () => {
 	       
 		if(newStatus && newStatus.value ) {
@@ -15,28 +12,24 @@ const Headline = ({userHeadline,statusEditBoxVisible, showEditBox, hideEditBox, 
 			}
 		}		
 	
-
  return (
 	<div>
-	<h2><span id="statusText">“{userHeadline}”</span> <span id="editStatusButton" className="glyphicon glyphicon-edit" onClick={showEditBox}></span></h2>
-	          <div id = "editStatus" className="input-group" className = {statusEditBoxVisible}>
-		            <input id= "statusBox" type="text" className="form-control" ref={(node) => newStatus = node}></input>
-		            <span  id ="changeStatus" className="input-group-addon btn btn-primary glyphicon glyphicon-ok " onClick={_changeHeadline}></span>
-		            <span  id ="cancelStatus" className="input-group-addon btn btn-primary glyphicon glyphicon-remove " onClick={hideEditBox}></span>
- 	         </div>
-	</div> 
+		<h2><span id="statusText">“{userHeadline}”</span> <span id="editStatusButton" className="glyphicon glyphicon-edit" onClick={showEditBox}></span></h2>
+		<div id="editStatus" className="input-group" className={ statusEditBoxVisible}>
+			<input id="statusBox" type="text" className="form-control" ref={(node)=> newStatus = node}></input>
+			<span id="changeStatus" className="input-group-addon btn btn-primary glyphicon glyphicon-ok " onClick={_changeHeadline}></span>
+			<span id="cancelStatus" className="input-group-addon btn btn-primary glyphicon glyphicon-remove " onClick={hideEditBox}></span>
+		</div>
+	</div>
 )
 
 }
 
-
 export default connect(
     (state) => {
-	
         return {
-
-            userHeadline: state.MainReducer.userHeadline,
-	    statusEditBoxVisible : state.MainReducer.statusEditBoxVisible
+             userHeadline: state.MainReducer.userHeadline,
+			 statusEditBoxVisible : state.MainReducer.statusEditBoxVisible
         }
     },
 (dispatch) => { return {

@@ -9,5 +9,4 @@ const Reducer = combineReducers({
 		ProfileReducer : ProfileReducer
 })
 
-
 export default Reducer

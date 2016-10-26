@@ -9,20 +9,14 @@ import ReactDOM from 'react-dom'
 import { Router, IndexRoute, Route, browserHistory, hashHistory } from 'react-router';
 
 import App from './app'
-
-
 import Reducer from './reducers'
 
 const logger = createLogger()
 const store = createStore(Reducer, applyMiddleware(logger));
 
-
-
-
 ReactDOM.render(
-          <Provider store = {store}>
-          		<App /> 
-                    
+          <Provider store={ store}>
+                    <App />
           </Provider>
 , document.getElementById('app')
 );
