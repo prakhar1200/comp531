@@ -5,8 +5,7 @@ export default class Register extends React.Component {
 
     render() { 
         return (
-//<div>      
-      
+
               <div className="panel panel-default">
                     <div className="panel-heading text-center"><h2 className="panel-title">Register</h2></div>
                     <div className="panel-body ">
@@ -40,8 +39,6 @@ export default class Register extends React.Component {
                         </div>      
                     </div>
                 </div>
-        
-//</div>                 
     )}
 }
 

@@ -17,7 +17,6 @@ export const  Login = ({loginClicked, displayError})=> {
 			}
 		}		
 
-
 			return (
 		    <div>
                
@@ -32,7 +31,6 @@ export const  Login = ({loginClicked, displayError})=> {
                                <input type="password" id="login_password" className="form-control formMargin" placeholder="Password" ref={(node)=> password = node} required />
                              <input type="submit" value="Login" className="btn btn-primary col-md-12"  aria-label="Login" onClick={_loginClicked}  />
 						
-                               
                             </div>
                     </div>
             </div>
