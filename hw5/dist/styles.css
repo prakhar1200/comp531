@@ -1,0 +1,105 @@
+body {
+    background: #e9ebee;
+}
+
+#indexBody {
+    background-image: url(giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#profile_img {
+    width: 250px;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+.flw_display img {
+    height: 150px;
+    object-fit: fill;
+}
+
+#newPosts {
+    margin-bottom: 20px;
+}
+
+.flw_name {
+    font-variant: small-caps;
+    font-family: "Montserrat", Helvetica;
+    color: #365899;
+}
+
+.formMargin {
+    margin-bottom: 10px;
+}
+
+.font_style {
+    font-variant: small-caps;
+    font-family: "Montserrat", Helvetica;
+    color: #365899;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.font_size {
+    font-family: "Montserrat", Helvetica;
+    font-size: 18px;
+}
+
+.panelContainer {
+    margin-top: 10%;
+}
+
+#editStatusButton {
+    font-size: 18px;
+}
+
+#nav_name {
+    font-variant: small-caps;
+    color: white !important;
+    font-size: 1.8em !important;
+}
+
+.cards {
+    text-align: center;
+    position: relative;
+    border: 1px #D3D3D3 solid;
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.cards:hover {
+    border-color: green;
+}
+
+.col-md-2 {
+    padding-left: 0px;
+}
+
+.cards img {
+    width: 100%;
+}
+
+
+.buttonc {
+    width: 46%;
+    margin: 2%;
+}
+
+.posts {
+    display: table;
+}
+
+.innerpost {
+    vertical-align: top;
+}
+
+.commentBox {
+    width: 100%;
+}
+
+.top-buffer { margin-top:50px; }
