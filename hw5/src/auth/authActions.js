@@ -17,7 +17,7 @@ const login = (username, password) => (dispatch) => {
     .then(r => resource('GET', 'following'))
     .then(r => r.following.join(','))
     .then(r => fetchMainPage(r)(dispatch))
-    .catch(dispatch({
+    .catch(r => dispatch({
 		type : 'ERROR'
 	}))
 }
