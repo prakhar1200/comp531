@@ -21,7 +21,7 @@ export const  Login = ({loginClicked, displayError})=> {
 		    <div>
                
              <div className="panel panel-default">
-                    <div className="panel-heading text-center"><h2 className="panel-title">Login</h2></div>
+                    <div className="panel-heading text-center"><h3>Login</h3></div>
                     <div className="panel-body text-center">
                             <div className="form-group col-md-10 col-md-offset-1 text-center">
                                

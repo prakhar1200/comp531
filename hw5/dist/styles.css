@@ -66,8 +66,8 @@ body {
 .cards {
     text-align: center;
     position: relative;
-    border: 1px #D3D3D3 solid;
-    width: 50%;
+    border: 2px #D3D3D3 solid;
+    width: 100%;
     display: inline-block;
     margin-bottom: 10px;
 }

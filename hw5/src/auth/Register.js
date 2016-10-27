@@ -7,7 +7,7 @@ export default class Register extends React.Component {
         return (
 
               <div className="panel panel-default">
-                    <div className="panel-heading text-center"><h2 className="panel-title">Register</h2></div>
+                    <div className="panel-heading text-center"><h3>Register</h3></div>
                     <div className="panel-body ">
                       <div className="col-md-10 col-md-offset-1">
                             <form method="GET" action="index.html">
