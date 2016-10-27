@@ -17,7 +17,7 @@ const Nav = ({navToMain, navToProfile, navToLanding}) =>  {
             			<span className="icon-bar"></span>
             			<span className="icon-bar"></span>
         		</button>
-        		<a id="nav_name" className="navbar-brand" href="#">Prakhar Doshi</a>
+        		<a id="nav_name" className="navbar-brand" href="#">Share`it</a>
       		</div>
       		<div id="navbar" className="navbar-collapse collapse">
         		<form className="navbar-form navbar-left">

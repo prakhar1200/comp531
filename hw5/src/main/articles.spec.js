@@ -5,7 +5,7 @@ import fetch, { mock } from 'mock-fetch'
 
 describe('Validate Articles', () => {
 
-	let fetchArticles,url
+	let fetchArticles,url,commentsVisibility
 
 	beforeEach(() => {
 		if (mockery.enable) {
@@ -14,6 +14,7 @@ describe('Validate Articles', () => {
 				require('node-fetch')
 				url = require('../actions')
 				fetchArticles = require('./articles/articlesAction').default
+				commentsVisibility = require('./articles/articlesAction').commentsVisibility
   			}
 		})
 
@@ -62,5 +63,29 @@ describe('Validate Articles', () => {
 })
 		.then(done())
 })	
+	it('Should Show Comments', (done) =>{
+		const article = {displayComment : false}
+
+		commentsVisibility(article)(action =>{
+							expect(action.type).to.eql('SHOW_COMMENT')
+							done()
+
+		})
+
+
+	})
+
+		it('Should change the Hide Comments', (done) =>{
+		const article = {displayComment : true}
+
+		commentsVisibility(article)(action =>{
+							expect(action.type).to.eql('HIDE_COMMENT')
+							done()
+
+		})
+
+
+	})
+
 
 })	
