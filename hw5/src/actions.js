@@ -23,8 +23,7 @@ export const url = 'https://webdev-dummy.herokuapp.com'
           return r.text()
         }
       } else {
-        // useful for debugging, but remove in production
-        console.error(`${method} ${endpoint} ${r.statusText}`)
+
         throw new Error(r.statusText)
       }
     })
