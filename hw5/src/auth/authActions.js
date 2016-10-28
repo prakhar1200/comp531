@@ -2,6 +2,7 @@ import resource from '../actions'
 import fetchMainPage from '../fetchMain'
 import fetchFollowing from '../main/followers/followersAction'
 
+//Login Use and Fetch User Related Information
 const login = (username, password) => (dispatch) => {
   
   

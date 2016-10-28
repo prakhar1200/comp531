@@ -6,13 +6,10 @@ import { Provider } from 'react-redux'
 import createLogger from 'redux-logger'
 import { createStore, applyMiddleware } from 'redux'
 import ReactDOM from 'react-dom'
-import { Router, IndexRoute, Route, browserHistory, hashHistory } from 'react-router';
-
 import App from './app'
 import Reducer from './reducers'
 
-const logger = createLogger()
-const store = createStore(Reducer, applyMiddleware(logger));
+const store = createStore(Reducer);
 
 ReactDOM.render(
           <Provider store={ store}>
