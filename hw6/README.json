@@ -1,5 +1,5 @@
 {
 "netid" : "psd3",
-"frontend": "shareitdemo.surge.sh",
+"frontend": "http://shareitdemo.surge.sh/",
 "backend":"https://shareitbackend.herokuapp.com/"
 }
