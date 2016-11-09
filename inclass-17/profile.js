@@ -88,6 +88,7 @@ module.exports = app => {
      app.get('/zipcode/:user?', getZipcode)
      app.put('/email', putEmail)
      app.get('/email/:user?', getEmail)	
+
 	
 }
 
