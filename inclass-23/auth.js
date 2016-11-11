@@ -6,7 +6,7 @@ var session = require('express-session')
 var passport = require('passport')
 var FacebookStrategy = require('passport-facebook').Strategy
 
-app = express()
+const app = express()
 app.use(session({secret :'someweirdstringthatthebrowsercaresabout' }))
 app.use(passport.initialize());
 app.use(passport.session())
@@ -33,7 +33,6 @@ passport.deserializeUser(function(id , done) {
 
 })
 
-
 passport.use(new FacebookStrategy(config, function(token, refreshToken, profile, done){
 	process.nextTick(function() {
 	return done(null, profile)
@@ -46,8 +45,6 @@ const server = app.listen(port, () => {
      const addr = server.address()
      console.log(`Server listening at http://${addr.address}:${addr.port}`)
 })
-
-var passport = require('passport')
 
 function isLoggedIn(req, res, next) {
 	if(req.isAuthenticated()) {
