@@ -32,8 +32,7 @@ const loginUser =(req, res) => {
 
 	if(typeof(response)==='object') { 
 		const sessionId = Math.random().toString(36).substring(2,7);
-		console.log()
-		redis.set(sessionId, req.body.username)
+		redis.set(sessionId, req.body.username) //Sets the SessionID to User in REDIS
 		res.cookie(cookieKey,sessionId,{maxAge:3600*1000, httpOnly : true});
 
 		res.send({username : req.body.username, result : "success"}); 
@@ -41,26 +40,31 @@ const loginUser =(req, res) => {
 		else { res.sendStatus(401);}
 	}
 
-const logout= (req, res) => {
+//MiddleWare  that checks if the SessionID in REDIS	
+const isLoggedIn = (req, res, next) => {
   	if(req.cookies[cookieKey])  {
   		redis.get(req.cookies[cookieKey], function(err, user ){
   			if(!user){
   				res.sendStatus(401)
   			}
   			else {
-  				console.log(req.cookies[cookieKey],"is mapped to ", user);
-				res.send("Bye"+user)
+				req.username = user
+				next();
 			}  
  	    })
 	}
 	else{
-		res.send("No cookie Sent");
-  	}
+  			res.sendStatus(401)
+  	}	
+}
+
+const logout= (req, res) => {
+		res.send("Bye"+req.username)
 }
 
 app.post('/register/', registerUser);
 app.post('/login', loginUser);	 
-app.get('/logout', logout); 
+app.get('/logout', isLoggedIn, logout); 
 
 const port = process.env.PORT || 3000
 const server = app.listen(port, () => {
@@ -68,6 +72,7 @@ const server = app.listen(port, () => {
      console.log(`Server listening at http://${addr.address}:${addr.port}`)
 })	
 			
+
 
 
 
