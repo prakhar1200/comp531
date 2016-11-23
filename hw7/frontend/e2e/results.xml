@@ -1,0 +1,11 @@
+<testsuite name="Mocha Tests" tests="9" failures="0" errors="0" skipped="0" timestamp="Wed, 09 Nov 2016 13:01:20 GMT" time="57.567">
+<testcase classname="Test FrontEnd Page" name="should log in as the test user" time="0.541"/>
+<testcase classname="Test FrontEnd Page" name="Update the headline and verify the change" time="8.917"/>
+<testcase classname="Test FrontEnd Page" name="Should Add a follower and increase the count by 1" time="7.672"/>
+<testcase classname="Test FrontEnd Page" name="Should Remove a follower and decrease count by 1" time="3.552"/>
+<testcase classname="Test FrontEnd Page" name="Should Add an article and increase the article count by 1" time="7.806"/>
+<testcase classname="Test FrontEnd Page" name="Should Change the Zip " time="7.842"/>
+<testcase classname="Test FrontEnd Page" name="Should Change the Email " time="5.744"/>
+<testcase classname="Test FrontEnd Page" name="Should Change the Password by displaying will not change" time="4.726"/>
+<testcase classname="shutdown" name="now" time="0.176"/>
+</testsuite>

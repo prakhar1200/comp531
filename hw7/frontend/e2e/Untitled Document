@@ -1,0 +1,12 @@
+    it("Should Remove A Follower", (done) => {
+	sleep(500)
+	.then(findxpath("//button[@name='followers'][1]").click())
+    .then(findxpath("//button[@name='followers'][1]")
+            .then(elem => {console.log(elem)
+                expect(elem).to.equal(0)
+            .then(done) }
+
+        )
+     )       
+	.then(done)
+	})
