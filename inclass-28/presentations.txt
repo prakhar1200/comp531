@@ -1,0 +1,11 @@
+﻿Which presentation was the most polished and delivered, and why?
+I liked the presentation about WebRTC. It was neat and descriptive. The Presenter gave a good background about the concept VOIP and how WebRTC using API can extend the features,  embed communication technologies within the Web browser and allow cross browser communication.
+
+
+Which topic did you learn the most from and what did you learn?
+I think I learnt from various topics. We have used React in the class but the comparison of React vs Vue.js was interesting to understand pros/cons about react based frontend  development. It was also interesting to know about GraphQL vs REST, given the background knowledge about REST architecture from class implementation. It was good to learn how GRAPHQL can overcome some of the drawbacks of REST and provide better efficiency. 
+
+
+Which talk did you like the best and why?
+I liked the talk about WebGL (Web Graphics Library)  the most. It is good to know about how Javascript can be used to render advanced graphics. 
+Since I believe Progressive web apps are the future of app development where the aim is to move app use and  development both on the web. WebGL is a very useful library as it can support building high graphic gaming apps on web.
