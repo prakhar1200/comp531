@@ -12,13 +12,13 @@ export const  Login = ({loginClicked, displayError, fbLogin})=> {
   let username;
   let password;
 
-	const _loginClicked = () => {
+  const _loginClicked = () => {
 		if(username && username.value && password && password.value){
 			loginClicked(username.value, password.value)
 			}
 		}		
 
-			return (
+	return (
 		    <div>
                
              <div className="panel panel-default">
@@ -46,7 +46,7 @@ export const  Login = ({loginClicked, displayError, fbLogin})=> {
         </div>
     )}
 
-export default connect(
+  export default connect(
     (state) => {
         return {
             displayError: state.AuthReducer.displayError
