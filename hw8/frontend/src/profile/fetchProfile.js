@@ -1,8 +1,6 @@
 import resource from '../actions'
 import validator from 'validator'
-import {
-    url
-} from '../actions'
+import {url} from '../actions'
 
 //Fetches the Profile Information like Zipcode, Email by making fetch request to the Backend  
 const fetchProfile = () => (dispatch) => {

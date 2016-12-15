@@ -16,7 +16,6 @@ const AuthReducer = (state = initialState , action) => {
 		else {return state}
 		case 'ERROR':
 		return Object.assign({}, state, {displayError:true})
-	
       		
 		case 'NAV_PROFILE':
 		return Object.assign({}, state, {location : 'PROFILE_PAGE'})
@@ -30,11 +29,9 @@ const AuthReducer = (state = initialState , action) => {
 		case 'LOG_OUT':
 		return Object.assign({}, state, initialState)  
 
-		           
-		
 		default: return state;
 		
-}
+	}
 }
 export default AuthReducer
 

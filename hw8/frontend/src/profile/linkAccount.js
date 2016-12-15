@@ -2,7 +2,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {linkAccount} from './fetchProfile'
-
 const LinkForm = ({linkAccountClicked, linkError, linkSuccess, type, username}) => {
 
 let user = {
@@ -13,8 +12,6 @@ const _linkButtonClicked = () => {
          linkAccountClicked(user)
          Object.keys(user).map((elem) => {user[elem].value=''})
 }
-
-
 
 return (
 <div>   
@@ -59,15 +56,12 @@ return (
 )
 }
 
-
 export default connect(
-(state) => ( {
-                        
+(state) => ( {                    
               linkError : state.ProfileReducer.linkError,
               linkSuccess : state.ProfileReducer.linkSuccess,
-          type : state.ProfileReducer.type,
-          username : state.ProfileReducer.username
-            
+              type : state.ProfileReducer.type,
+              username : state.ProfileReducer.username        
 }),
 (dispatch) => {
     return {

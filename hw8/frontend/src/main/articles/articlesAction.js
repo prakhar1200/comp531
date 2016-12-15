@@ -1,10 +1,7 @@
 import resource from '../../actions'
 import fetch from 'isomorphic-fetch'
-import {
-    url
-} from '../../actions'
+import {url} from '../../actions'
 import validator from 'validator'
-
 
 //Post a new article Takes in the Image Bytes and text
 //Createa a FormData object to send the Image and text 

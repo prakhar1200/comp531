@@ -4,8 +4,6 @@ import {commentsVisibility} from './articlesAction'
 import {editPost, postArticle} from './articlesAction'
 import Comments from './comments' 
 
-
-
 const Articles = ({articles, displayComment, handleImageChange, username, editArticle}) => {
   let newText;
   let articleImage;
@@ -14,8 +12,8 @@ const Articles = ({articles, displayComment, handleImageChange, username, editAr
   let postID;
 
 return (
- <div className="col-md-7">
-  <div id="newPosts" className="row">
+  <div className="col-md-7">
+      <div id="newPosts" className="row">
         <div className="input-group">
          <span className="input-group-addon btn btn-success" >
           <label htmlFor="uploadFile" className="glyphicon glyphicon-camera" >
@@ -51,9 +49,6 @@ return (
 	      	<Comments  userComments = {article.comments} articleID = {article._id} />
 	 	  </div>
            </div>
-	  	
-           
-
 ))
 }
 </div>
@@ -63,7 +58,6 @@ return (
 export default connect(
     (state) => {
         return {
-
             articles: state.MainReducer.articles,
 	    username : state.ProfileReducer.username
         }
@@ -75,8 +69,6 @@ export default connect(
 		editArticle : (text, articleID) => editPost(text, articleID)(dispatch)	
          }
   }
-
-
 )(Articles)
 
 

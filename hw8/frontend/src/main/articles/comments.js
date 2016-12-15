@@ -6,7 +6,6 @@ const Comments = ({userComments, articleID, sendComment, edit,  username}) => {
 	let commentText;
 	let editComment;
 	
-
 	return (
 	 <div>
 	 	<div className="input-group commentBox ">
@@ -17,9 +16,7 @@ const Comments = ({userComments, articleID, sendComment, edit,  username}) => {
                 	</button>
               	</span>
 		</div>	
- 
- 	 
- 	 
+ 	  	 
 		{userComments.map((comment) => (
 		<div>
 	           <strong>{comment.author} commented on {(new Date(comment.date)).toString()}</strong>
@@ -39,8 +36,6 @@ const Comments = ({userComments, articleID, sendComment, edit,  username}) => {
     )
 	}
 
-
-
 export default connect(
     (state) => {
         return {
@@ -51,11 +46,9 @@ export default connect(
 (dispatch) => {
 	return {
 		sendComment :(text, articleID, commentId) =>  postComment(text, articleID, commentId)(dispatch),
-		edit :(text, articleID, commentId) =>  postComment(text, articleID, commentId)(dispatch)
-		
+		edit :(text, articleID, commentId) =>  postComment(text, articleID, commentId)(dispatch)		
          }
   }
-
 )(Comments)		
 
 

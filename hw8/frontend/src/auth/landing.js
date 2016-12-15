@@ -30,11 +30,6 @@ import {fetchHeadline} from './authActions'
     }    
 }
 
-
-
-
-
-
 export default connect(
 null,
 (dispatch) => {return {

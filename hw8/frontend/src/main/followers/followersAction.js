@@ -1,7 +1,5 @@
 import resource from '../../actions'
-import {
-    connect
-} from 'react-redux'
+import {connect} from 'react-redux'
 
 
 //Aggregate the Follower Name, Follower Headline , Follower Avatar into an Arrya of User Objects

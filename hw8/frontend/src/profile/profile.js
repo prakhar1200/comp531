@@ -8,10 +8,7 @@ import Avatar from '../main/user/avatar'
 import ProfileForm from './profileForm'
 import LinkForm from './linkAccount'
 import {changeAvatar} from './fetchProfile'
-
-
-const  Profile = ({change}) => {
-            
+const  Profile = ({change}) => {       
     const uploadAvatar =  (avatar) => {
         if(avatar.target.files[0])
         {
@@ -19,14 +16,11 @@ const  Profile = ({change}) => {
         }
 
     }
-
-
         return(
 	<div>	           
                <Nav />
 	 <div className="jumbotron">
 	 	<div className="text-center">
-
 	 		<Avatar />
 	 		<div className="row">
            		<span className="btn btn-primary col-md-6 col-md-offset-3 col-md-right-offset-3"> <label for="uploadFile" className="col-md-12">
@@ -35,7 +29,6 @@ const  Profile = ({change}) => {
              		</label>
              	</span>
              </div>
-
 		 </div>
  	 </div>	
 		<div>    
@@ -49,14 +42,11 @@ const  Profile = ({change}) => {
 
 export default connect(
      null,
-    (dispatch) => {
-        
+    (dispatch) => {     
          return {
             change : (newAvatar) => changeAvatar(newAvatar)(dispatch),
-         }
-       
+         }       
     }
-
 )(Profile)
 
 

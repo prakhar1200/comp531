@@ -5,17 +5,13 @@ import resource from '../../actions'
 
 const Headline = ({userHeadline,statusEditBoxVisible, showEditBox, hideEditBox, changeHeadline}) => {
 
-
-       let newStatus;
-
-	const _changeHeadline = () => {
-	       
+        let newStatus;
+	const _changeHeadline = () => {	       
 		if(newStatus && newStatus.value ) {
 			changeHeadline(newStatus.value)
 			}
 		newStatus.value = '';
 		}		
-	
 
  return (
 	<div>
@@ -27,10 +23,7 @@ const Headline = ({userHeadline,statusEditBoxVisible, showEditBox, hideEditBox, 
  	         </div>
 	</div> 
 )
-
 }
-
-
 export default connect(
     (state) => {
 	

@@ -3,10 +3,6 @@ import { connect } from 'react-redux'
 import {unfollowUser} from './followersAction'
 import {addFollower} from './followersAction'
 
-
-
-
-
 const Followers = ({followerInfo, remove, add,addUserError,errorMessage}) => {
 
 let newUsername;
@@ -62,19 +58,16 @@ return (
 export default connect(
     (state) => {
         return {
-
             followerInfo: state.MainReducer.followingInfo,
 	    errorMessage:state.MainReducer.errorMessage,
 	    addUserError:state.MainReducer.addUserError
         }
     },
     (dispatch) => {
-        
          return {
             remove : (username) => unfollowUser(username)(dispatch),
             add : (newUsername, followerInfo)=> addFollower(newUsername.value, followerInfo)(dispatch)
-         }
-       
+         }       
     }
 
 )(Followers)

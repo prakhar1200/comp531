@@ -5,16 +5,12 @@ import {updateProfile} from './fetchProfile'
 
 const ProfileForm = ({zipcode, emailID, updateProfileClicked, displayError, errorMessage, type}) => {
 
-let user = {
-
-};
+let user = {};
 const _updateProfileClicked = () => {
 
          updateProfileClicked(user)
          Object.keys(user).map((elem) => {user[elem].value=''})
 }
-
-
 
 return (
 
@@ -26,8 +22,7 @@ return (
                             <div className="row">    
                                  <div className="col-md-12">
                                          <label className="col-md-2 font_style">Email</label>
-                                         <input type="email" id="emailID" className="col-md-9 col-md-offset-1 input-lg formMargin" readonly="readonly" placeholder={emailID} ref={(node)=> user.email = node} />                               
-  
+                                         <input type="email" id="emailID" className="col-md-9 col-md-offset-1 input-lg formMargin" readonly="readonly" placeholder={emailID} ref={(node)=> user.email = node} />                                
                                          <label className="col-md-2 font_style">Zip Code</label>
                                          <input type="text" id="zip" placeholder = {zipcode} className="col-md-9 col-md-offset-1 input-lg formMargin" ref={(node)=> user.zipcode = node}   pattern="[0-9]{5}" /> 				 <div className={type==='facebook'?"hide":""}>
                                          <label className="col-md-2 font_style">Password</label>
@@ -38,10 +33,7 @@ return (
                                          <button type="button" id="update" className="btn btn-primary col-md-12" onClick = {_updateProfileClicked} aria-label="Update"><strong>Update</strong>
                                          <span className="glyphicon glyphicon-share" aria-hidden="true">
                                          </span>
-                                         </button>
-
-					
-					
+                                         </button>					
                                  </div>         
                             </div>
                             
@@ -56,26 +48,20 @@ return (
             </div>
 </div> 
 
-
-
 )
 }
 
-
 export default connect(
-(state) => ( {
-		  			
-		      zipcode : state.ProfileReducer.zipcode,
-		      emailID : state.ProfileReducer.email,	
+(state) => ( {  			
+	      zipcode : state.ProfileReducer.zipcode,
+	      emailID : state.ProfileReducer.email,	
               displayError : state.ProfileReducer.displayError,
               errorMessage : state.ProfileReducer.errorMessage,
-	      type : state.ProfileReducer.type
-			
+	      type : state.ProfileReducer.type	
 }),
 (dispatch) => {
     return {
         updateProfileClicked :(user) => updateProfile(user)(dispatch)
         }
   }
-
 )(ProfileForm)

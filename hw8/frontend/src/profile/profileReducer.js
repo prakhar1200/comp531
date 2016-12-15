@@ -21,7 +21,6 @@ const ProfileReducer = (state = initialState , action) => {
   		
 		case 'CHANGE_EMAIL':
 		return Object.assign({}, state, {email : action.payload,  displayError : false})
- 
 		
 		case 'CHANGE_PASSWORD' :
 

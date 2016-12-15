@@ -4,22 +4,16 @@ import { connect } from 'react-redux'
 import Headline from './headline'
 import Avatar from './avatar'
 
-
-
- const  User = () =>{ 
- 		
+ const  User = () =>{ 		
 	return (	
 	<div className="jumbotron">
         <div className="container-fluid text-center">
 	<Avatar />	
 	<Headline />
         </div>
-  </div>
-
-    
+  </div>    
 )
 }
-
 
 export default User
 
