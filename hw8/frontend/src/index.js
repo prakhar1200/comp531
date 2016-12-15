@@ -9,16 +9,12 @@ import ReactDOM from 'react-dom'
 import {persistStore, autoRehydrate} from 'redux-persist'
 
 import App from './app'
-
-
 import Reducer from './reducers'
 
 const store = createStore(Reducer);
-
 ReactDOM.render(
           <Provider store = {store}>
-          		<App /> 
-                    
+          	  <App />   
           </Provider>
 , document.getElementById('app')
 );

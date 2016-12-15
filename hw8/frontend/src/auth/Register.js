@@ -20,7 +20,6 @@ let matchingPassword = '';
                               <label className="col-md-2 font_style">Email</label>
                               <input type="email" id="emailID" className="col-md-9  form-control formMargin" placeholder="ab@c.com" ref={(node)=> userDetails.email = node} required />
 
-
                               <label className="col-md-2 font_style">Zip</label>
                               <input type="text" id="zip" placeholder ="Zip" className="col-md-9  form-control formMargin" ref={(node)=> userDetails.zipcode = node} pattern="[0-9]{5}"/>
 

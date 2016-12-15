@@ -13,12 +13,10 @@ export const  Login = ({loginClicked, displayError, fbLogin})=> {
   let password;
 
 	const _loginClicked = () => {
-
 		if(username && username.value && password && password.value){
 			loginClicked(username.value, password.value)
 			}
 		}		
-
 
 			return (
 		    <div>
@@ -28,14 +26,14 @@ export const  Login = ({loginClicked, displayError, fbLogin})=> {
                     <div className="panel-body text-center">
                             <div className="form-group col-md-10 col-md-offset-1 text-center">
                                
-                               <label className="col-md-2 font_style">Email</label>
-                               <input type="email" id="username" className="form-control formMargin" placeholder="UserName" ref={(node)=> username = node} required /> 
-                               <label className="col-md-2 font_style">Password</label>
-                               <input type="password" id="login_password" className="form-control formMargin" placeholder="Password" ref={(node)=> password = node} required />
-                             <input type="submit" id="login_button" value="Login" className="btn btn-primary col-md-12"  aria-label="Login" onClick={_loginClicked}  />
-			     <button className="btn btn-primary" onClick={fbLogin}><span className="fa fa-facebook">Facebook</span></button>
-						
-                               
+                              <label className="col-md-2 font_style">Email</label>
+                              <input type="email" id="username" className="form-control formMargin" placeholder="UserName" ref={(node)=> username = node} required /> 
+                              <label className="col-md-2 font_style">Password</label>
+                              <input type="password" id="login_password" className="form-control formMargin" placeholder="Password" ref={(node)=> password = node} required />
+                              <input type="submit" id="login_button" value="Login" className="btn btn-primary col-md-12"  aria-label="Login" onClick={_loginClicked}  />
+			                                <button className="btn btn-primary" onClick={fbLogin}>
+                                           <span className="fa fa-facebook">Facebook</span>
+                                      </button>                               
                             </div>
                     </div>
             </div>
@@ -47,9 +45,6 @@ export const  Login = ({loginClicked, displayError, fbLogin})=> {
           
         </div>
     )}
-
-
-
 
 export default connect(
     (state) => {
